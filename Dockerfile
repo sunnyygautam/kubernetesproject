@@ -1,8 +1,8 @@
 FROM centos:latest
 MAINTAINER sunnykr910@gmail.com
-RUN yum install -y httpd \
+RUN /bin/sh -c 'yum install -y httpd \
   zip \
- unzip 
+ unzip'
 ADD https://www.free-css.com/assets/files/free-css-templates/download/page258/loxury.zip /var/www/html/
 WORKDIR /var/www/html
 RUN unzip loxury.zip
