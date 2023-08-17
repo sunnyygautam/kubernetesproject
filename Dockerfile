@@ -9,5 +9,5 @@ WORKDIR /usr/share/nginx/html
 RUN unzip loxury.zip
 RUN cp -rvf loxury/* .
 RUN rm -rf loxury loxury.zip
-CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+CMD ["/etc/init.d/nginx", "-D", "FOREGROUND"]
 EXPOSE 80
